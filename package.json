@@ -1,0 +1,15 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "A program that interacts with a Pokemon API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Alcazar",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "parcel": "^2.9.2"
+  }
+}

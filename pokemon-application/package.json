@@ -1,0 +1,16 @@
+{
+  "name": "pokemon-application",
+  "version": "1.0.0",
+  "description": "a server application that utlizes Express.js Router and integrates with MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Alex Alcazar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pokemon-api": "file:../pokemon-api"
+  }
+}

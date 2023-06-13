@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>PokeDex</title>
+</head>
+<body>
+    <h1>Image</h1>
+    <div id="window" class="window">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/8.0.9/superagent.min.js"></script>
+    <script type="module" src="../pokemon-api/api.js"></script>
+    <script type="module" src="../app.js"></script>
+    <form id="searchPokemon">
+        <label for="search">Search:</label>
+        <input type="text" name="name">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
