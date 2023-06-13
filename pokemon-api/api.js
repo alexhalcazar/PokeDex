@@ -3,7 +3,6 @@
 
 const getPokemonByName = async (name) => {
     try {
-        console.log('getPokemonByName called');
 
         const searchUrl = `https://pokeapi.co/api/v2/pokemon/${name}`;
 
