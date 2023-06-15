@@ -14,13 +14,49 @@ const getPokemonByName = async (name) => {
     }
 
         const data = await response.json();
-        return data.sprites.front_default;
-
+        
+        // return data.sprites.front_default;
+        return data;
     } catch (error) {
         console.log(error)
     }
 }
 
+const getPokemonPicture = async (name) => {
+    const pokemon = await getPokemonByName(name);
+    const sprite = pokemon.sprites.front_default;
+
+    return sprite;
+    
+}
+
+const getPokemonHp = async (name) => {
+    const pokemon = await getPokemonByName(name);
+    const attack = pokemon.stats[0].base_stat;
+    return attack;
+}
+
+const getPokemonAttack = async (name) => {
+    const pokemon = await getPokemonByName(name);
+    const attack = pokemon.stats[1].base_stat;
+    return attack;
+}
+
+const getPokemonDefense = async (name) => {
+    const pokemon = await getPokemonByName(name);
+    const attack = pokemon.stats[2].base_stat;
+    return attack;
+}
+
 // Note that I've used the export default syntax instead 
 // of module.exports because it's compatible with client-side JavaScript.
-export default getPokemonByName;
+// export default getPokemonByName;
+
+// now I have more functions and I don't want to use export default
+export {
+    getPokemonByName,
+    getPokemonPicture,
+    getPokemonHp,
+    getPokemonAttack,
+    getPokemonDefense
+}

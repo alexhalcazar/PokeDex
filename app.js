@@ -1,6 +1,9 @@
-import getPokemonByName from './pokemon-api/api.js'
+import { getPokemonByName, getPokemonPicture, getPokemonHp, getPokemonAttack, getPokemonDefense}  from './pokemon-api/api.js'
 
 
+  // document is an object in javaScript provided by the browser's Document Object Model (DOM) API. 
+  // It represents the web page as an object, allowing you to access 
+  // and manipulate the elements and content of the HTML document.
 document.getElementById('searchPokemon').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent form submission
 
@@ -10,15 +13,43 @@ document.getElementById('searchPokemon').addEventListener('submit', async functi
     const searchInput = document.querySelector('input[name="name"]');
     const searchTerm = searchInput.value;
   
-    const result = await getPokemonByName(searchTerm);
+    const picture = await getPokemonPicture(searchTerm);
+    const health = await getPokemonHp(searchTerm);
+    const attack = await getPokemonAttack(searchTerm);
+    const defense = await getPokemonDefense(searchTerm);
 
-    // Get the "window" div element
+    // Get the specified elements
     const windowDiv = document.getElementById('window');
+    
+    const fillerDivs = document.querySelectorAll('.filler');
+
+  
+    fillerDivs.forEach((fillerDiv) => {
+      const statContainer = fillerDiv.closest('.stat-container');
+      const statName = statContainer.querySelector('p').textContent;
+      console.log(statName);
+      const statValue = statContainer.querySelector('.stat');
+      
+      if(statName === 'health') {
+        statValue.textContent = health;
+        fillerDiv.style.width = `${health}.px`;
+      } else if (statName === 'attack') {
+        statValue.textContent = attack;
+        fillerDiv.style.width = `${attack}.px`;
+      } else if (statName === 'defense') {
+        statValue.textContent = defense;
+        fillerDiv.style.width = `${defense}.px`;
+      }
+    });
+
 
     // built-in JavaScript method that allows you to create an HTML element dynamically
     // Create an image element
     const image = document.createElement('img');
-    image.src = result;
+    image.src = picture;
+
+    // used to add a class to the image allowing CSS to manipulate the image
+    image.classList.add('pokemon-image');
   
     // Clear the contents of the "window" div
     windowDiv.innerHTML = '';
@@ -27,5 +58,7 @@ document.getElementById('searchPokemon').addEventListener('submit', async functi
     // browser will automatically load and display the image specified in the src attribute
     windowDiv.appendChild(image);
 
-    console.log(result);
   });
+
+
+  

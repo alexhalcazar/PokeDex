@@ -1,3 +1,11 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+    font-size: 16px;
+}
 .window {
     display: grid;
     place-items: center;
@@ -5,4 +13,32 @@
     height: 300px;
     background-color: azure;
     border: 1px solid black
+}
+
+.bar {
+    display: grid;
+    place-items: start;
+    width: 300px;
+    height: 20px;
+    background-color: beige;
+    border: 1px solid black;
+}
+
+.filler {
+    width: 0px;
+    height: 20px;
+    background-color: red;
+}
+
+.pokemon-image {
+    width: 200px;
+    height: auto;
+}
+
+.stat-container {
+    display: grid;
+    grid-template-columns: auto 1fr 500px;
+    gap: 20px; /* Adjust the gap between columns as needed */
+    align-items: center;
+    justify-items: start;
 }

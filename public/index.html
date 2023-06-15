@@ -7,7 +7,7 @@
     <title>PokeDex</title>
 </head>
 <body>
-    <h1>Image</h1>
+    <h1>PokeDex</h1>
     <div id="window" class="window">
     </div>
     <!-- script tags specify the source (URL) of the JavaScript files to be loaded by the browser -->
@@ -17,9 +17,31 @@
     <script type="module" src="../pokemon-api/api.js"></script>
     <script type="module" src="../app.js"></script>
     <form id="searchPokemon">
-        <label for="search">Search:</label>
-        <input type="text" name="name">
+        <label for="name">Search:</label>
+        <input type="text" id="name" name="name" autocomplete="on">
         <button type="submit">Submit</button>
     </form>
+    <h2>Base Stats</h2>
+    <div class="stat-container">
+        <p>health</p> 
+        <div class="bar">
+            <div class="filler"></div>
+        </div>
+        <p class="stat">0</p>
+    </div>
+    <div class="stat-container">
+        <p>attack</p> 
+        <div class="bar">
+            <div class="filler"></div>
+        </div>
+        <p class="stat">0</p>
+    </div>
+    <div class="stat-container">
+        <p>defense</p> 
+        <div class="bar">
+            <div class="filler"></div>
+        </div>
+        <p class="stat">0</p>
+    </div>
 </body>
 </html>
