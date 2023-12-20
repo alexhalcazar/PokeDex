@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const port = 5555;
+const port = 4000;
 
 // server static files 
 // path.join method is used to construct an absolute path to the public directory 
