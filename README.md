@@ -42,12 +42,12 @@ This command should now be executed within the 'pokemon-application' folder.
 
 ## Access the PokeDex API server
 
-Open your web browser and navigate to  http://localhost:4000
+Open your web browser and navigate to [http://localhost:4000]
 You can use this server to explore and interact with the API.
 
 ## Reporting Issues
 
-If you encounter any issues or have suggesttions for improvement, please [create an issue](https://github.com/alexhalcazar/PokeDex/issues)
+If you encounter any issues or have suggestions for improvement, please [create an issue](https://github.com/alexhalcazar/PokeDex/issues)
 
 ## Authors
 
