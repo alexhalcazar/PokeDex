@@ -1,6 +1,6 @@
 # PokeDeX
 
-A program that uses express.js and integrates a Pokemon API
+A web application that uses express.js and integrates a Pokemon API
 
 ## Project Structure
 - `pokemon-application`: Server application that utilizes Express.js Router.
